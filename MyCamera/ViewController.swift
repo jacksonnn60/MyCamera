@@ -1,9 +1,11 @@
-//
-//  ViewController.swift
-//  MyCamera
-//
-//  Created by Mca Book PRO on 26.01.2021.
-//
+
+/*
+            This is the common custom camera manual
+            
+            - AVFoundation
+            - CapturedSession...etc
+ */
+ 
 
 import UIKit
 import AVFoundation
