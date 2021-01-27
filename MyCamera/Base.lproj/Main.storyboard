@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aan-eL-A4v">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ad3-ue-RfU">
+                                <rect key="frame" x="172" y="621" width="70" height="70"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.70882742750000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="TnC-WI-NGr"/>
+                                    <constraint firstAttribute="height" constant="70" id="qrO-SB-eAX"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="takePhotoButtoDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BOi-1T-rtE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHs-Aw-DOy">
+                                <rect key="frame" x="20" y="20" width="90" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="NQ9-CJ-Lrd"/>
+                                    <constraint firstAttribute="height" constant="162" id="ZZx-K1-lpC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <connections>
+                                    <action selector="capturedPhotoDidAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oPy-fv-ak3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Aan-eL-A4v" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DLY-e2-sJ7"/>
+                            <constraint firstItem="uHs-Aw-DOy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FLW-84-4Ok"/>
+                            <constraint firstItem="Aan-eL-A4v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YQY-wX-8o5"/>
+                            <constraint firstItem="uHs-Aw-DOy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="aNE-hW-glx"/>
+                            <constraint firstItem="Aan-eL-A4v" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fkk-GJ-6GX"/>
+                            <constraint firstItem="ad3-ue-RfU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="geL-pX-Lgd"/>
+                            <constraint firstItem="Aan-eL-A4v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="h2N-tc-keh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ad3-ue-RfU" secondAttribute="bottom" constant="45" id="tcM-lp-a2L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="captureImageViewButton" destination="uHs-Aw-DOy" id="aC3-qh-mF7"/>
+                        <outlet property="previewView" destination="Aan-eL-A4v" id="mUD-uz-ugx"/>
+                        <outlet property="takePhotoButton" destination="ad3-ue-RfU" id="gNa-Q5-u7O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="71.739130434782609"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
